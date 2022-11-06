@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -64,10 +64,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: const [
-                    Color(0xff72668c),
-                    Color(0xff72668c),
-                    Color(0xff72668c),
-                    Color(0xff72668c)
+                    Color.fromARGB(255, 207, 203, 216),
+                    Color.fromARGB(255, 216, 213, 224),
+                    Color.fromARGB(255, 207, 203, 216),
+                    Color.fromARGB(255, 202, 197, 211)
                   ])),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
