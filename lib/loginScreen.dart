@@ -1,86 +1,118 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
-  @override
-  _LoginScreenState createState() => _LoginScreenState();
-}
+  const LoginScreen({Key? key}) : super(key: key);
 
-Widget buildEmail() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      Text(
-        'Email',
-        style: TextStyle(
-            color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
-      ),
-      SizedBox(height: 10),
-      Container(
-        alignment: Alignment.centerLeft,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
-            ]),
-        height: 60,
-        child: TextField(
-          keyboardType: TextInputType.emailAddress,
-          style: TextStyle(
-            color: Colors.black87,
-          ),
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14),
-              prefixIcon: Icon(
-                Icons.email,
-                color: Color(0xff5ac18e),
-              ),
-              hintText: 'Email',
-              hintStyle: TextStyle(color: Colors.black38)),
-        ),
-      )
-    ],
-  );
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
-        child: GestureDetector(
-          child: Stack(children: <Widget>[
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: const [
-                    Color.fromARGB(255, 207, 203, 216),
-                    Color.fromARGB(255, 216, 213, 224),
-                    Color.fromARGB(255, 207, 203, 216),
-                    Color.fromARGB(255, 202, 197, 211)
-                  ])),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
-                  Text(
-                    'SignIn',
-                    style: TextStyle(
-                        color: Colors.white30,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
+      backgroundColor: Colors.grey,
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                'assets/Hand_creating_a_lightbulb_with_green_tree_inside.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            SizedBox(
+              height: 20,
+            ),
+            // Hello fella
+            Text(
+              'SONAK Ltd',
+              style: GoogleFonts.bebasNeue(
+                  fontWeight: FontWeight.bold, fontSize: 30),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Welcome back, it\'s time to get the work done',
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            // Email Textfield
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Machine ID',
+                    ),
+                  ),
+                ),
               ),
+            ),
+
+            SizedBox(
+              height: 15,
+            ),
+            // Password TextField
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Password',
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(
+              height: 18,
+            ),
+            // Signin Button
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 110.5),
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 84, 173, 147),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(
+                    child: Text(
+                  'Sign In',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16),
+                )),
+              ),
+            ),
+
+            SizedBox(
+              height: 60,
             )
           ]),
         ),

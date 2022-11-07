@@ -15,28 +15,22 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(
-              'assets/Hand_creating_a_lightbulb_with_green_tree_inside.jpg'),
-          fit: BoxFit.cover,
-        ),
-      ),
-      // ignore: non_constant_identifier_names
-      child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 161, 197, 194),
+          // ignore: non_constant_identifier_names
+          child: Scaffold(
+        backgroundColor: Color.fromARGB(255, 125, 156, 154),
         bottomNavigationBar: CurvedNavigationBar(
           animationDuration: Duration(milliseconds: 300),
           color: Color.fromARGB(255, 211, 204, 204),
+
           // ignore: prefer_const_literals_to_create_immutables
           items: [
             const Icon(
               Icons.home,
-              color: Colors.lightBlue,
+              color: Colors.blueGrey,
             ),
             Icon(
               Icons.favorite,
-              color: Colors.amber,
+              color: Color.fromARGB(255, 167, 129, 15),
             ),
             Icon(
               Icons.settings,

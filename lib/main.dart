@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_import
 import 'package:curved_tab/homepage.dart';
 
 import 'loginSCreen.dart';
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Login UI',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: LoginScreen(),
     );
   }
 }
