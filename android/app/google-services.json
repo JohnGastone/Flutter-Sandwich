@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "453357746385",
+    "project_id": "flutter-sandwich",
+    "storage_bucket": "flutter-sandwich.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453357746385:android:b2cb257fba5744e7f3adf0",
+        "android_client_info": {
+          "package_name": "com.example.curved_tab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453357746385-6oecq229e6og6427g2dpp822sldjg7d2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1uySo2TR0eZdCynLOln3yETtxXJwQ0c0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453357746385-6oecq229e6og6427g2dpp822sldjg7d2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

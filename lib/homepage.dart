@@ -17,24 +17,24 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) => Container(
           // ignore: non_constant_identifier_names
           child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 125, 156, 154),
+        backgroundColor: Color.fromARGB(255, 3, 58, 58),
         bottomNavigationBar: CurvedNavigationBar(
           animationDuration: Duration(milliseconds: 300),
-          color: Color.fromARGB(255, 211, 204, 204),
+          color: Color.fromARGB(255, 219, 208, 208),
 
           // ignore: prefer_const_literals_to_create_immutables
           items: [
             const Icon(
-              Icons.home,
-              color: Colors.blueGrey,
-            ),
-            Icon(
-              Icons.favorite,
+              Icons.home_filled,
               color: Color.fromARGB(255, 167, 129, 15),
             ),
             Icon(
-              Icons.settings,
+              Icons.add,
               color: Colors.blueGrey,
+            ),
+            Icon(
+              Icons.report_rounded,
+              color: Color.fromARGB(255, 79, 128, 70),
             ),
           ],
           onTap: (index) {
