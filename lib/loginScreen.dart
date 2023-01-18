@@ -118,7 +118,7 @@ class _Home_PageState extends State<Home_Page> {
                                           ? Icons.remove_red_eye_outlined
                                           : Icons.visibility_off_outlined,
                                       color: Colors.black45,
-                                      size: 30,
+                                      size: 38,
                                     )),
                                 const Text(
                                   'Forgot Password?',
