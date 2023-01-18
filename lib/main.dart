@@ -1,9 +1,11 @@
-// ignore_for_file: prefer_const_constructors, unused_import
+// ignore_for_file: prefer_const_constructors, unused_import, depend_on_referenced_packages
+import 'package:curved_tab/dashboard.dart';
+import 'package:curved_tab/loginScreen.dart';
 import 'package:curved_tab/homepage.dart';
-import 'package:curved_tab/main_page.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'loginSCreen.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:page_transition/page_transition.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,9 +21,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Login UI',
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
-    );
+        title: 'Flutter Login UI',
+        debugShowCheckedModeBanner: false,
+        home: AnimatedSplashScreen(
+            duration: 2000,
+            splashIconSize: 1000,
+            splash: Image.asset('images/sonak_logo.jpeg'),
+            splashTransition: SplashTransition.scaleTransition,
+            // pageTransitionType: PageTransitionType.scale,
+            backgroundColor: Color.fromARGB(255, 254, 254, 255),
+            nextScreen: Home_Page(
+              title: '',
+            )));
   }
 }
