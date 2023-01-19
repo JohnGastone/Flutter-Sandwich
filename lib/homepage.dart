@@ -115,7 +115,7 @@ class _MyNewAppState extends State<MyNewApp> {
           },
           height: 70,
           backgroundColor: Colors.transparent,
-          animationDuration: const Duration(milliseconds: 300),
+          animationDuration: const Duration(milliseconds: 500),
           // animationCurve: ,
         ),
         body: Stack(children: [
@@ -144,7 +144,7 @@ class _MyNewAppState extends State<MyNewApp> {
         widget = const Meter();
         break;
       case 2:
-        widget = const MultiSectionForm();
+        widget = const RegisterCard();
         break;
       case 3:
         widget = const CardFloat();
