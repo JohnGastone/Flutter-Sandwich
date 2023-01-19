@@ -28,23 +28,13 @@ class RegisterCard extends StatelessWidget {
           )),
           padding: const EdgeInsets.all(12.0),
           child: Column(children: [
-            SizedBox(
-              height: 50,
-            ),
-            Text(
-              'Ripoti ya siku',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: 3,
-            ),
             Text(
               'Sajili Kadi.',
               style: TextStyle(fontSize: 35, fontWeight: FontWeight.normal),
             ),
             Ink.image(
               image: AssetImage('./images/waterdrop.png'),
-              height: 1,
+              height: 12,
               fit: BoxFit.cover,
               child: InkWell(
                 onTap: () {
@@ -75,59 +65,66 @@ class RegisterCard extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Stack(children: [
-        buildColorCard(context),
-        Image.asset(
-          'images/water.jpg',
-          fit: BoxFit.cover,
-          width: double.infinity,
-          height: double.infinity,
-        ),
-        SizedBox(
-          height: 60,
-        ),
 
-        // Center(
-        //   child: ElevatedButton(
-        //     style: ElevatedButton.styleFrom(
-        //       padding: const EdgeInsets.all(30),
-        //       backgroundColor: Color.fromARGB(255, 133, 98, 109),
-        //     ),
-        //     child: const Text('Sajili Kadi'),
-        //     onPressed: () {
-        //       showDialog(
-        //           context: context,
-        //           builder: (context) => AlertDialog(
-        //                 actions: [
-        //                   Row(
-        //                     children: [
-        //                       TextButton(
-        //                         onPressed: () {
-        //                           Navigator.of(context).pop();
-        //                         },
-        //                         child: const Text('Funga'),
-        //                       ),
-        //                       TextButton(
-        //                         onPressed: () async {
-        //                           Navigator.pop(context);
-        //                           Navigator.of(context).push(MaterialPageRoute(
-        //                             builder: (context) => MultiSectionForm(),
-        //                           ));
-        //                         },
-        //                         child: const Text('Sajili'),
-        //                       )
-        //                     ],
-        //                   ),
-        //                 ],
-        //                 title: const Text(''),
-        //                 contentPadding: const EdgeInsets.all(20.0),
-        //                 content:
-        //                     const Text('Tafadhali Sogeza Kadi Yako Karibu.'),
-        //               ));
-        //     },
-        //   ),
-        // ),
+      body: ListView(children: [
+        SizedBox(
+          height: 50,
+        ),
+        buildColorCard(context)
       ]),
+      // body: Stack(children: [
+      //   Image.asset(
+      //     'images/water.jpg',
+      //     fit: BoxFit.cover,
+      //     width: double.infinity,
+      //     height: double.infinity,
+      //   ),
+      //   SizedBox(
+      //     height: 60,
+      //   ),
+      //   buildColorCard(context),
+
+      //   // Center(
+      //   //   child: ElevatedButton(
+      //   //     style: ElevatedButton.styleFrom(
+      //   //       padding: const EdgeInsets.all(30),
+      //   //       backgroundColor: Color.fromARGB(255, 133, 98, 109),
+      //   //     ),
+      //   //     child: const Text('Sajili Kadi'),
+      //   //     onPressed: () {
+      //   //       showDialog(
+      //   //           context: context,
+      //   //           builder: (context) => AlertDialog(
+      //   //                 actions: [
+      //   //                   Row(
+      //   //                     children: [
+      //   //                       TextButton(
+      //   //                         onPressed: () {
+      //   //                           Navigator.of(context).pop();
+      //   //                         },
+      //   //                         child: const Text('Funga'),
+      //   //                       ),
+      //   //                       TextButton(
+      //   //                         onPressed: () async {
+      //   //                           Navigator.pop(context);
+      //   //                           Navigator.of(context).push(MaterialPageRoute(
+      //   //                             builder: (context) => MultiSectionForm(),
+      //   //                           ));
+      //   //                         },
+      //   //                         child: const Text('Sajili'),
+      //   //                       )
+      //   //                     ],
+      //   //                   ),
+      //   //                 ],
+      //   //                 title: const Text(''),
+      //   //                 contentPadding: const EdgeInsets.all(20.0),
+      //   //                 content:
+      //   //                     const Text('Tafadhali Sogeza Kadi Yako Karibu.'),
+      //   //               ));
+      //   //     },
+      //   //   ),
+      //   // ),
+      // ]),
     );
   }
 }
