@@ -30,7 +30,10 @@ class RegisterCard extends StatelessWidget {
           child: Column(children: [
             Text(
               'Sajili Kadi.',
-              style: TextStyle(fontSize: 35, fontWeight: FontWeight.normal),
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic),
             ),
             Ink.image(
               image: AssetImage('./images/waterdrop.png'),
@@ -68,7 +71,10 @@ class RegisterCard extends StatelessWidget {
           child: Column(children: [
             Text(
               'Angalia Taarifa za kadi.',
-              style: TextStyle(fontSize: 35, fontWeight: FontWeight.normal),
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic),
             ),
             Ink.image(
               image: AssetImage('./images/waterdrop.png'),
@@ -103,23 +109,21 @@ class RegisterCard extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: ListView(children: [
+      body: ListView(scrollDirection: Axis.vertical, children: [
         SizedBox(
           height: 35,
         ),
         buildColorCard(context),
         SizedBox(
-          height: 20,
+          height: 5,
         ),
-        Image.asset(
-          'images/water.jpg',
-          fit: BoxFit.cover,
-          width: double.infinity,
-          height: double.infinity,
-        ),
+        // Image.asset(
+        //   'images/water.jpg',
+        //   fit: BoxFit.cover,
+        // ),
         buildColorTwoCard(context),
         SizedBox(
-          height: 20,
+          height: 5,
         ),
       ]),
       // body: Stack(children: [
