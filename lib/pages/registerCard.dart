@@ -40,6 +40,44 @@ class RegisterCard extends StatelessWidget {
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const MultiSectionForm()));
+                },
+              ),
+            ),
+          ]),
+        ),
+      );
+
+  Widget buildColorTwoCard(context) => Card(
+        color: Colors.white38,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        shadowColor: Color.fromARGB(221, 139, 124, 124),
+        elevation: 15,
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+            colors: const [
+              Color.fromARGB(255, 238, 227, 237),
+              Color.fromARGB(255, 173, 118, 114)
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          )),
+          padding: const EdgeInsets.all(12.0),
+          child: Column(children: [
+            Text(
+              'Angalia Taarifa za kadi.',
+              style: TextStyle(fontSize: 35, fontWeight: FontWeight.normal),
+            ),
+            Ink.image(
+              image: AssetImage('./images/waterdrop.png'),
+              height: 12,
+              fit: BoxFit.cover,
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const Dashboard()));
                 },
               ),
@@ -65,12 +103,24 @@ class RegisterCard extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
-
       body: ListView(children: [
         SizedBox(
-          height: 50,
+          height: 35,
         ),
-        buildColorCard(context)
+        buildColorCard(context),
+        SizedBox(
+          height: 20,
+        ),
+        Image.asset(
+          'images/water.jpg',
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: double.infinity,
+        ),
+        buildColorTwoCard(context),
+        SizedBox(
+          height: 20,
+        ),
       ]),
       // body: Stack(children: [
       //   Image.asset(
