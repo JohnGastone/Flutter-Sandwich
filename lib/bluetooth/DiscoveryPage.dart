@@ -122,7 +122,7 @@ class _DiscoveryPage extends State<DiscoveryPage> {
                   bonded = (await FlutterBluetoothSerial.instance
                       .bondDeviceAtAddress(address))!;
                   print(
-                      'Bonding with ${device.address} has ${bonded ? 'succed' : 'failed'}.');
+                      'Bonding with ${device.address} has ${bonded ? 'succeed' : 'failed'}.');
                 }
                 setState(() {
                   results[results.indexOf(result)] = BluetoothDiscoveryResult(

@@ -128,8 +128,8 @@ class RegisterCard extends StatelessWidget {
       ]),
       // body: Stack(children: [
       //   Image.asset(
-      //     'images/water.jpg',
       //     fit: BoxFit.cover,
+      //     'images/water.jpg',
       //     width: double.infinity,
       //     height: double.infinity,
       //   ),
